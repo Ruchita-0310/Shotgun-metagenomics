@@ -5,8 +5,8 @@
 ## 2. BBduk
 For [BBduk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/), I have used Force-Trim Modulo, Adapter trimming, and Kmer filtering packages.
 
-```
 for force trim (run it in a loop)
+```
 ####### Run your script #########################
 module load bbmap/38.84 
 # Define an array of sample prefixes (e.g., "Li49151-RS-Diatoms-4C_S1")
@@ -25,7 +25,7 @@ do
         out2="${base_dir}/${sample}_R2_trimmed.fastq.gz"
 done
 ```
-for  adapter trimming
+for  adapter trimming (run it in a loop)
 ```
 ####### Run your script #########################
 module load bbmap/38.84
