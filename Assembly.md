@@ -27,6 +27,8 @@ mamba create -n spades
 mamba activate spades
 mamba install -c bioconda spades
 ####### Run your script #########################
+mamba activate spades
+cd /work/ebg_lab/eb/Ruchita_working/shotgun_data
 # Define the array with your specific samples
 samples=("Li49151-RS-Diatoms-4C" "Li49152-RS-PL4-30C" "Li49153-RS-PL4-NH4Cl-RT" 
          "Li49154-RS-GE7-RT" "Li49155-RS-GE2022-RT" "Li50127-RS-DL-1-RT")
