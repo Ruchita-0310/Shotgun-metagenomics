@@ -20,3 +20,31 @@ do
     megahit -1 ${SAMPLE}_clean_R1.fastq -2 ${SAMPLE}_clean_R2.fastq -o ./megahit_assembly/seperate/${SAMPLE}_output -t 32
 done
 ```
+## 2. MetaSPAdes
+[SPAdes](https://github.com/ablab/spades) is a versatile toolkit designed for assembly and analysis of sequencing data
+```
+mamba create -n spades
+mamba activate spades
+mamba install -c bioconda spades
+####### Run your script #########################
+# Define the array with your specific samples
+samples=("Li49151-RS-Diatoms-4C" "Li49152-RS-PL4-30C" "Li49153-RS-PL4-NH4Cl-RT" 
+         "Li49154-RS-GE7-RT" "Li49155-RS-GE2022-RT" "Li50127-RS-DL-1-RT")
+
+# Define the main output directory
+main_output_dir="./metaspades_assembly"
+
+# Loop through each sample and run the spades.py command
+for sample in "${samples[@]}"; do
+    # Define the input files based on the sample name
+    R1="${sample}_R1_001.fastq.gz"
+    R2="${sample}_R2_001.fastq.gz"
+    output_dir="$main_output_dir/${sample}_separate_unmerged"
+    
+    # Create the output directory if it doesn't exist
+    mkdir -p "$output_dir"
+    
+    # Run the SPAdes command
+    spades.py --meta -1 $R1 -2 $R2 -o $output_dir --threads 32
+done
+```
