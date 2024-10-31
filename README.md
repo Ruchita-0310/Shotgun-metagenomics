@@ -3,7 +3,7 @@
 [FastQC](https://github.com/s-andrews/FastQC) can be run either on server or your own device. 
 
 ## 2. BBduk
-For [BBduk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/), I have used Force-Trim Modulo, Adapter trimming, and Kmer filtering packages.
+For [BBduk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/), I have used Force-Trim Modulo, Adapter trimming, Kmer filtering, and Quality trimming apackages.
 
 for force trim (run it in a loop)
 ```
@@ -65,5 +65,21 @@ do
         outm2=${sample}_matched_R2.fastq.gz \
         ref=/work/ebg_lab/software/bbmap/v38.84/resources/phix174_ill.ref.fa.gz \
         k=31 hdist=1 t=32
+done
+```
+for Quality trimmin
+```
+####### Run your script #########################
+module load bbmap/38.84
+
+cd /work/ebg_lab/eb/Ruchita_working/shotgun_data
+# Define an array of sample prefixes
+samples=("Li49151-RS-Diatoms-4C_S1" "Li49152-RS-PL4-30C_S2" "Li49153-RS-PL4-NH4Cl-RT_S3" "Li49154-RS-GE7-RT_S4" "Li49155-RS-GE2022-RT_S5" "Li50127-RS-DL-1-RT_S16")
+
+# Loop through each sample and run bbduk.sh for both R1 and R2 files
+for sample in "${samples[@]}"
+do
+    bbduk.sh in=${sample}_R1_001.fastq.gz out=${sample}_clean_R1.fastq.gz qtrim=rl trimq=15 minlength=30 t=32
+    bbduk.sh in=${sample}_R2_001.fastq.gz out=${sample}_clean_R2.fastq.gz qtrim=rl trimq=15 minlength=30 t=32
 done
 ```
