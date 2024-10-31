@@ -67,7 +67,7 @@ do
         k=31 hdist=1 t=32
 done
 ```
-for Quality trimmin
+for Quality trimming
 ```
 ####### Run your script #########################
 module load bbmap/38.84
