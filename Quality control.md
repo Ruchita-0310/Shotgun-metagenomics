@@ -44,7 +44,7 @@ do
         tbo tpe k=23 mink=11 hdist=1 ktrim=r t=32
 done
 ```
-for kmer filter
+for kmer filter (run it in a loop)
 ```
 ####### Run your script #########################
 module load bbmap/38.84
@@ -67,7 +67,7 @@ do
         k=31 hdist=1 t=32
 done
 ```
-for Quality trimming
+for Quality trimming (run it in a loop)
 ```
 ####### Run your script #########################
 module load bbmap/38.84
