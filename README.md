@@ -2,7 +2,7 @@
 ## 1. FastQC
 [FastQC](https://github.com/s-andrews/FastQC) can be run either on server or your own device. 
 
-## BBduk
+## 2. BBduk
 For [BBduk](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbduk-guide/), I have used Force-Trim Modulo, Adapter trimming, and Kmer filtering packages.
 
 ```
@@ -43,4 +43,9 @@ do
         out2=${sample}_clip_R2.fastq.gz \
         tbo tpe k=23 mink=11 hdist=1 ktrim=r t=32
 done
+```
+for kmer filter
+```
+
+
 ```
