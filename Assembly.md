@@ -55,6 +55,8 @@ done
 ```
 ####### Run your script #########################
 module load bbmap/38.84
+
+cd /work/ebg_lab/eb/Ruchita_working/shotgun_data
 # Define an array of sample IDs to loop through
 samples=("Li49151-RS-Diatoms-4C_S1"
          "Li49152-RS-PL4-30C_S2"
