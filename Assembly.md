@@ -22,6 +22,7 @@ done
 ```
 ## 2. MetaSPAdes
 [SPAdes](https://github.com/ablab/spades) is a versatile toolkit designed for assembly and analysis of sequencing data
+Run it in a loop
 ```
 mamba create -n spades
 mamba activate spades
@@ -51,7 +52,8 @@ for sample in "${samples[@]}"; do
 done
 ```
 ## 3. Kmer Coverage
-[BBMap](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/)
+[BBMap](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/) annotates reads with their kmer depth
+Run it in a loop
 ```
 ####### Run your script #########################
 module load bbmap/38.84
