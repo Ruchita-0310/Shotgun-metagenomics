@@ -50,3 +50,23 @@ for sample in "${samples[@]}"; do
     spades.py --meta -1 $R1 -2 $R2 -o $output_dir --threads 32
 done
 ```
+## 3. Kmer Coverage
+[BBMap](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/)
+```
+####### Run your script #########################
+module load bbmap/38.84
+# Define an array of sample IDs to loop through
+samples=("Li49151-RS-Diatoms-4C_S1"
+         "Li49152-RS-PL4-30C_S2"
+         "Li49153-RS-PL4-NH4Cl-RT_S3"
+         "Li49154-RS-GE7-RT_S4"
+         "Li49155-RS-GE2022-RT_S5"
+         "Li50127-RS-DL-1-RT_S16")
+
+# Loop through each sample
+for sample in "${samples[@]}"; do
+    kmercoverage.sh in=${sample}_R1_001.fastq.gz in2=${sample}_R2_001.fastq.gz \
+    out=${sample}_kmer.fastq hist=${sample}_hist.txt
+done
+
+```
