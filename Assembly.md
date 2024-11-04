@@ -74,7 +74,7 @@ for sample in "${samples[@]}"; do
 done
 ```
 ## 4. Unicycler
-(Unicycler)[https://github.com/rrwick/Unicycler] is a hybrid assembler
+[Unicycler](https://github.com/rrwick/Unicycler) is a hybrid assembler
 ```
 #Installing
 conda create -n unicycler
