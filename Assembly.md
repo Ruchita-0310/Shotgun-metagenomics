@@ -17,7 +17,7 @@ samples=("Li49151-RS-Diatoms-4C_S1" "Li49152-RS-PL4-30C_S2" "Li49153-RS-PL4-NH4C
 # Loop through each sample and run megahit
 for SAMPLE in "${samples[@]}"
 do
-    megahit -1 ${SAMPLE}_clean_R1.fastq -2 ${SAMPLE}_clean_R2.fastq -o ./megahit_assembly/seperate/${SAMPLE}_output -t 32
+    megahit -1 ${SAMPLE}_clean_R1.fastq -2 ${SAMPLE}_clean_R2.fastq -o ./megahit_assembly/seperate/${SAMPLE}_output -t 32 --continue
 done
 ```
 ## 2. MetaSPAdes
