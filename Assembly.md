@@ -72,5 +72,16 @@ for sample in "${samples[@]}"; do
     kmercoverage.sh in=${sample}_R1_001.fastq.gz in2=${sample}_R2_001.fastq.gz \
     out=${sample}_kmer.fastq hist=${sample}_hist.txt
 done
-
+```
+## 4. Unicycler
+(Unicycler)[https://github.com/rrwick/Unicycler] is a hybrid assembler
+```
+#Installing
+conda create -n unicycler
+conda activate unicycler
+git clone https://github.com/rrwick/Unicycler.git
+cd Unicycler
+make
+####### Run your script #########################
+Unicycler/unicycler-runner.py -h
 ```
