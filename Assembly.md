@@ -73,15 +73,22 @@ for sample in "${samples[@]}"; do
     out=${sample}_kmer.fastq hist=${sample}_hist.txt
 done
 ```
-## 4. Unicycler
-[Unicycler](https://github.com/rrwick/Unicycler) is a hybrid assembler
+## 4. MUFFIN
+[MUFFIN](https://github.com/RVanDamme/MUFFIN) is a hybrid assembler
 ```
-#Installing
-conda create -n unicycler
-conda activate unicycler
-git clone https://github.com/rrwick/Unicycler.git
-cd Unicycler
-make
-####### Run your script #########################
-Unicycler/unicycler-runner.py -h
+#installation
+java -version
+curl -s https://get.nextflow.io | bash
+git clone https://github.com/RVanDamme/MUFFIN.git
+
+#script
+./nextflow run main.nf --mode hybrid --output results \
+        --illumina /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/ \
+        --ont /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/ -profile local,conda
 ```
+## 5. OPERA-MS
+[OPERA-MS](https://github.com/CSB5/OPERA-MS) is also a hybrid assembler
+```
+# Daniel is running it
+```
+
