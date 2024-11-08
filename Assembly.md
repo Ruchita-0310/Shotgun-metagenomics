@@ -83,8 +83,8 @@ git clone https://github.com/RVanDamme/MUFFIN.git
 
 #script
 ./nextflow run main.nf --mode hybrid --output results \
-        --illumina /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/ \
-        --ont /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/ -profile local,conda
+        --illumina /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/SR/ \
+        --ont /work/ebg_lab/eb/Ruchita_working/shotgun_data/GE7/LR/ -profile local,conda
 ```
 ## 5. OPERA-MS
 [OPERA-MS](https://github.com/CSB5/OPERA-MS) is also a hybrid assembler
