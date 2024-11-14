@@ -21,6 +21,6 @@ checkm2 predict -t 30 -x fa --input ./ --output-directory ./CheckM2
 ## MetaErg
 ```
 ####### Run your script #########################
-\time  singularity exec --bind /work/ebg_lab/referenceDatabases/metaerg_db_V214:/databases --bind /path/to/your/bins:/data  --writable sandbox_metaerg_2.5.8/ metaerg --database_dir /databases --contig_file /data --file_extension .fa
+\time  singularity exec --bind /path/to/reference/database/metaerg_db_V214:/databases --bind /path/to/your/bins:/data  --writable sandbox_metaerg_2.5.8/ metaerg --database_dir /databases --contig_file /data --file_extension .fa
 ```
 
