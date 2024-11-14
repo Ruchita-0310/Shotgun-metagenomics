@@ -17,7 +17,7 @@ gtdbtk classify_wf --genome_dir ./ --out_dir gtdb_class --skip_ani_screen --exte
 ####### Run your script #########################
 checkm2 predict -t 30 -x fa --input ./ --output-directory ./CheckM2
 ```
-# Gene Prediction
+# Gene Annotation
 ## MetaErg
 ```
 ####### Run your script #########################
