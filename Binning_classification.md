@@ -9,6 +9,7 @@ metabat2 -i final.contigs.fa.gz -o ./metabat_bins
 ## GTDB-Tk 
 ```
 ####### Run your script #########################
+conda activate gtdbtk-2.3.2
 gtdbtk classify_wf --genome_dir ./ --out_dir gtdb_class --skip_ani_screen --extension fa
 ```
 # Completeness of bins
