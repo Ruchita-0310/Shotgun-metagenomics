@@ -15,6 +15,7 @@ gtdbtk classify_wf --genome_dir ./ --out_dir gtdb_class --skip_ani_screen --exte
 ## CheckM2
 ```
 ####### Run your script #########################
+conda activate checkm2
 checkm2 predict -t 30 -x fa --input ./ --output-directory ./CheckM2
 ```
 # Gene Annotation
