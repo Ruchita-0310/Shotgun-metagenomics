@@ -25,4 +25,11 @@ checkm2 predict -t 30 -x fa --input ./ --output-directory ./CheckM2
 ####### Run your script #########################
 \time  singularity exec --bind /path/to/reference/database/metaerg_db_V214:/databases --bind /path/to/your/bins:/data  --writable sandbox_metaerg_2.5.8/ metaerg --database_dir /databases --contig_file /data --file_extension .fa
 ```
+# FastANI
+```
+Download GCA_007692715.1 from NCBI - this is the reference genome
+Query genome is Nodosilinea bin with 100% completeness
+module load  miniconda3/fastani
+fastANI -q metabat_bins.15.fa -r GCA_007692715.1_ASM769271v1_genomic.fna -o output.txt
 
+```
