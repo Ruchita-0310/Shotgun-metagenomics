@@ -32,3 +32,4 @@ Query genome is Nodosilinea bin with 100% completeness
 module load  miniconda3/fastani
 fastANI -q metabat_bins.15.fa -r GCA_007692715.1_ASM769271v1_genomic.fna -o output.txt
 ```
+Ouput file: ANI estimate between metabat_bins.15.fa and GCA_007692715.1_ASM769271v1_genomic.fna is 98.5423. Out of the total 1132 sequence fragments from metabat_bins.15.fa, 2371 were aligned as orthologous matches
