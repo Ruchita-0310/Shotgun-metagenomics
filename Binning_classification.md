@@ -31,5 +31,4 @@ Download GCA_007692715.1 from NCBI - this is the reference genome
 Query genome is Nodosilinea bin with 100% completeness
 module load  miniconda3/fastani
 fastANI -q metabat_bins.15.fa -r GCA_007692715.1_ASM769271v1_genomic.fna -o output.txt
-
 ```
